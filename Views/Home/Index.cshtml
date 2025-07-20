@@ -1,0 +1,40 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h2>.+'- STUDENT INFORMATION -'+.</h1>
+<hr/>
+<p><strong>👩‍🎓 Student Name: </strong>@ViewBag.studentName</p>
+<p><strong>🧾 Score: </strong>@ViewBag.score</p>
+<p><strong>📕 Grade: </strong>@ViewBag.grade</p>
+<p><strong>🙏 Passed? </strong>@ViewBag.isPassed</p>
+<p><strong>✉️ Message: </strong>@ViewBag.message</p>
+
+<hr/>
+<p>📚 Courses Taken: @ViewBag.courses</p>
+<p>🔢 Number of Courses: @ViewBag.courseCount</p>
+<hr/>
+
+<p>🪙 Tuition: @ViewBag.tuitionFee</p>
+<p>📈 Net Fee after Discount: @ViewBag.netFee</p>
+<p>🕒 Today is: @ViewBag.Today</p>
+
+<hr/>
+
+<h2>.+'- STUDENT DETAILS''+.</h2>
+
+<table border = "1">
+    <tr>
+        <th> Name </th>
+        <th> Age </th>
+        <th> Course </th>
+    </th>
+    @foreach (var s in ViewBag.students)
+    {
+        <tr>
+            <td> @s.Name </td>
+            <td> @s.Age </td>
+            <td> @s.Course </td>
+        </tr>
+    }
+</table>
